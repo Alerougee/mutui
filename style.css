@@ -1,0 +1,123 @@
+*{
+    background-color: rgb(0, 119, 255);
+    margin-top: 0;
+}
+
+.inizio-container{
+    display: flex;
+    align-items: center; /* torna a center */
+    gap: 16px;
+    margin: 0 auto;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.logo img{
+    width: 50px;
+    padding: 3px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 0px 18px 8px rgba(1, 57, 109, 0.45); /* ombra più sfumata e naturale */
+}
+
+.logo{
+    margin-top: 2px; /* ripristina */
+}
+
+.titolo {
+    display: flex;
+    align-items: center; /* torna a center */
+}
+
+.titolo h1{
+    background-color: white;
+    padding: 10px 16px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 18px 8px rgba(1, 57, 109, 0.45); /* ombra più sfumata e naturale */
+    text-shadow: 0px 0px 10px rgb(1, 57, 109);
+    line-height: 46px; /* valore precedente */
+    margin: 0;
+    margin-top: -2px; /* alza leggermente il titolo */
+}
+
+.calcolatore {
+  max-width: 500px;
+  margin: auto;
+  margin-top: 30px;
+  background: white;
+  padding: 2rem;
+  border-radius: 24px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px 10px rgb(51, 71, 88);
+}
+
+.calcolatore h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  background-color: white;
+  text-shadow: 3px 3px 10px  rgb(0, 0, 0);
+}
+
+.calcolatore label {
+  display: block;
+  margin-top: 1rem;
+  background-color: #ffffff;
+}
+
+.calcolatore input,
+.calcolatore select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  background-color: white;
+}
+
+.calcolatore input{
+    border: none;
+    background-color: rgb(189, 189, 189);
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px 3px rgb(51, 71, 88);
+}
+
+.calcolatore .result {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgb(255, 0, 0);
+}
+
+.calcolatore button {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 2rem;
+  background: rgb(236, 236, 236);
+  box-shadow: 0px 0px 10px 5px rgb(75, 75, 75);
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.calcolatore button:hover {
+  background: #dbdbdb;
+}
+
+@media (max-width: 600px) {
+  .inizio-container,
+  .calcolatore {
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+  }
+  .calcolatore input,
+  .calcolatore select,
+  .calcolatore button {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .titolo h1 {
+    white-space: normal;
+    word-break: break-word;
+  }
+}

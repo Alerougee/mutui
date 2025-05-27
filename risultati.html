@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risultati Calcolatore Mutui</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="inizio-container">
+        <div class="logo">
+            <img src="kiron-logo.png">
+        </div>
+        <div class="titolo">
+            <h1>Calcolatore mutui</h1>
+        </div>
+    </div>
+    <div class="calcolatore">
+        <h2>Risultato rate da 5 a 40 anni</h2>
+        <div id="lista-rate"></div>
+        <button class="torna-indietro" onclick="window.location.href='index.html'">Torna alla prima pagina</button>
+    </div>
+    
+    <script>
+    
+    function getParam(name) {
+        const url = new URL(window.location.href);
+        return url.searchParams.get(name);
+    }
+    const P = parseFloat(getParam("amount"));
+    const annualRate = parseFloat(getParam("rate"));
+    const lista = document.getElementById("lista-rate");
+
+    if (isNaN(P) || isNaN(annualRate)) {
+        lista.innerHTML = '<div class="rate-box">Dati non validi.</div>';
+    } else {
+        const r = (annualRate / 100) / 12;
+        for (let anni = 5; anni <= 40; anni++) {
+            const n = anni * 12;
+            const rata = (P * r) / (1 - Math.pow(1 + r, -n));
+            lista.innerHTML += `
+                <div class="rate-box">
+                    <span class="anni">${anni} anni</span>
+                    <span class="rata">€ ${rata.toFixed(2)} / mese</span>
+                </div>
+            `;
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+/* ...puoi copiare tutto il contenuto di style.css qui per mantenere la stessa estetica... */
+*{
+    background-color: rgb(0, 119, 255);
+    margin-top: 0;
+}
+
+.inizio-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    position: sticky;
+    background-color: transparent;
+}
+
+.logo img{
+    width: 50px;
+    padding: 3px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 0px 18px 8px rgba(1, 57, 109, 0.45); /* ombra più forte */
+    
+}
+
+.logo{
+    margin-top: 2px; /* ripristina */
+    background-color: transparent;
+}
+
+.titolo {
+    display: flex;
+    align-items: center; /* torna a center */
+    background-color: transparent;
+    
+}
+
+.titolo h1{
+    background-color: white;
+    padding: 10px 16px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 18px 8px rgba(1, 57, 109, 0.45); /* ombra più forte */
+    text-shadow: 0px 0px 10px rgb(1, 57, 109);
+    line-height: 46px; /* valore precedente */
+    margin: 0;
+    margin-top: -2px; /* alza leggermente il titolo */
+}
+
+.calcolatore {
+  max-width: 500px;
+  margin: auto;
+  margin-top: 30px;
+  background: white;
+  padding: 2rem;
+  border-radius: 24px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px 10px rgb(51, 71, 88);
+}
+
+.calcolatore h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  background-color: white;
+  text-shadow: 3px 3px 10px  rgb(0, 0, 0);
+}
+
+.calcolatore label {
+  display: block;
+  margin-top: 1rem;
+  background-color: #ffffff;
+}
+
+.calcolatore input,
+.calcolatore select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  background-color: white;
+}
+
+.calcolatore input{
+    border: none;
+    background-color: rgb(189, 189, 189);
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px 3px rgb(51, 71, 88);
+}
+
+.calcolatore .result {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgb(255, 0, 0);
+}
+
+.calcolatore button {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 2rem;
+  background: rgb(236, 236, 236);
+  box-shadow: 0px 0px 10px 5px rgb(75, 75, 75);
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.calcolatore button:hover {
+  background: #dbdbdb;
+}
+
+.torna-indietro {
+    width: 100%;
+    margin-top: 2.5rem;
+    padding: 0.7rem;
+    background: rgb(236, 236, 236);
+    box-shadow: 0px 0px 10px 5px rgb(75, 75, 75, 0.15);
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.torna-indietro:hover {
+    background: #dbdbdb;
+}
+
+#lista-rate {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 18px;
+    background-color: transparent;
+}
+
+.rate-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0px 0px 10px 10px rgb(51, 71, 88, 0.18);
+    padding: 18px 24px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: white;
+
+}
+
+.rate-box .anni {
+    color: #003366;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.rate-box .rata {
+    color: #1a1a1a;
+    font-family: monospace;
+    font-size: 1.1em;
+    background-color: transparent;
+}
+
+@media (max-width: 600px) {
+  .inizio-container{
+    display: flex;
+    align-items: center; /* torna a center */
+    gap: 16px;
+    margin: 0 auto;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.logo img{
+    width: 50px;
+    padding: 3px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px 0 rgba(1, 57, 109, 0.18); /* ombra più sfumata e naturale */
+}
+
+.logo{
+    margin-top: 2px; /* ripristina */
+}
+
+.titolo {
+    display: flex;
+    align-items: center; /* torna a center */
+}
+
+.titolo h1{
+    background-color: white;
+    padding: 10px 16px;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px 0 rgba(1, 57, 109, 0.18); /* ombra più sfumata e naturale */
+    text-shadow: 0px 0px 10px rgb(1, 57, 109);
+    line-height: 46px; /* valore precedente */
+    margin: 0;
+    margin-top: -2px; /* alza leggermente il titolo */
+    text-align: center;
+}
+}
