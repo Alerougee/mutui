@@ -99,6 +99,8 @@
   border-radius: 12px;
   cursor: pointer;
     max-width: 200px;
+    margin: 0 auto;
+    justify-content: center;
 }
 
 .calcolatore button:hover {
