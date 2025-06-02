@@ -16,13 +16,12 @@
         </div>
     </div>
     <div class="calcolatore">
-        <h2>Risultato rate da 5 a 40 anni</h2>
+        <h2 id="titolo-rate">Rate per il valore di</h2>
         <div id="lista-rate"></div>
         <button class="torna-indietro" onclick="window.location.href='index.html'">Torna alla prima pagina</button>
     </div>
     
     <script>
-    
     function getParam(name) {
         const url = new URL(window.location.href);
         return url.searchParams.get(name);
@@ -30,6 +29,14 @@
     const P = parseFloat(getParam("amount"));
     const annualRate = parseFloat(getParam("rate"));
     const lista = document.getElementById("lista-rate");
+
+    // Aggiorna il titolo con il valore inserito
+    const titoloRate = document.getElementById("titolo-rate");
+    if (!isNaN(P)) {
+        titoloRate.textContent = `Rate per il valore di € ${P.toLocaleString('it-IT', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+    } else {
+        titoloRate.textContent = "Rate per il valore inserito";
+    }
 
     if (isNaN(P) || isNaN(annualRate)) {
         lista.innerHTML = '<div class="rate-box">Dati non validi.</div>';
